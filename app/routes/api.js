@@ -13,6 +13,7 @@ let apiRouter = express.Router();
 // apiRouter.post("/processData", ctrls.AuthCtrl.testRabbitMq);
 
 apiRouter.post("/verify-reset", ctrls.AuthCtrl.resetPasswordByPhone);
+apiRouter.get("/test", ctrls.AuthCtrl.test);
 apiRouter.post("/forget", ctrls.AuthCtrl.sendForgetSMSPhone);
 apiRouter.post("/signup-phone", ctrls.AuthCtrl.signupPhone);
 apiRouter.post("/verify", ctrls.AuthCtrl.verifyAccountByPhoneCode);
