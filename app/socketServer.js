@@ -1,5 +1,5 @@
 // const { createServer } = require("http");
-const { Server } = require("socket.io");
+const socketIO = require("socket.io");
 const { createAdapter } = require("@socket.io/cluster-adapter");
 const { setupWorker } = require("@socket.io/sticky");
 const jwt = require("jsonwebtoken");
@@ -7,7 +7,7 @@ require("dotenv").config();
 
 module.exports = {
   up: function (server) {
-    const io = new Server(server);
+    const io = socketIO(server);
 
     io.adapter(createAdapter());
     setupWorker(io);
