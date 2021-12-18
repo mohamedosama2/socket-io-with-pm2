@@ -9,6 +9,8 @@
     "lint": "eslint app"
   },
   "dependencies": {
+    "@socket.io/cluster-adapter": "^0.1.0",
+    "@socket.io/sticky": "^1.0.1",
     "amqplib": "^0.7.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
@@ -55,7 +57,7 @@
     "passport-local": "^1.0.0",
     "pm2": "^5.1.2",
     "randexp": "^0.5.3",
-    "socket.io": "^2.0.4",
+    "socket.io": "^4.4.0",
     "socketio-jwt": "^4.6.2",
     "swagger-jsdoc": "^4.0.0",
     "swagger-ui-express": "^4.1.4",
