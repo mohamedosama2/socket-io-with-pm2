@@ -15,7 +15,8 @@ const server = require("./server");
     server.up(function () {
       console.info(
         "🔌 Server is listening at ".green + "http://localhost:%d".yellow,
-        this.address().port
+        // this.address().port
+        process.env.PORT
       );
       console.info("🕹  Enjoy! 😚".green);
     });

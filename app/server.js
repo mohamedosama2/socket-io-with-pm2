@@ -44,8 +44,11 @@ const server = http.createServer(app);
 module.exports = {
   up: (cb) => {
     // let server = app.listen(process.env.PORT);
+    console.log("error a");
     server.listen(process.env.PORT || 5000);
+    console.log("error b");
     server.on("listening", cb);
+    console.log("error c");
     server.on("error", function (err) {
       console.error(err.message.red);
     });
