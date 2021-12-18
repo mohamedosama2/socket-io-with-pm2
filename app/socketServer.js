@@ -11,6 +11,8 @@ module.exports = {
     io.adapter(createAdapter());
     setupWorker(io);
 
+    console.log("Running Socket");
+
     const namespace = io.of("/chat");
 
     namespace.use(function (socket, next) {

@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "app",
       script: "app",
-      instances: "2",
+      instances: "4",
       env: {
         NODE_ENV: "development",
       },
