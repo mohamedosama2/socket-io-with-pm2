@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       script: "worker.js",
-      instances: "1",
+      instances: "2",
       exec_mode: "cluster",
     },
     {
