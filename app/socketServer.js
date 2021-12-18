@@ -7,12 +7,12 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   up: function (server) {
     console.log("Running Socket 0");
-    const io = socketIO(server);
+    const io = socketIO(server, { transports: ["websocket"] });
     console.log("Running Socket 1");
 
-    // io.adapter(createAdapter());
+    io.adapter(createAdapter());
     console.log("Running Socket 2");
-    // setupWorker(io);
+    setupWorker(io);
 
     console.log("Running Socket 3");
 
