@@ -6,11 +6,12 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const httpServer = createServer();
-const io = new Server(httpServer);
+const io = new Server(httpServer); //8080
 
 io.adapter(createAdapter());
 
 setupWorker(io);
+
 const namespace = io.of("/chat");
 
 namespace.use(function (socket, next) {

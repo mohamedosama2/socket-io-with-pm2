@@ -50,7 +50,7 @@ module.exports = {
       console.error(err.message.red);
     });
 
-    // require("./socketServer").up(server);
+    require("./socketServer").up(server);
   },
 };
 
