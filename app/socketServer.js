@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   up: function (server) {
     console.log("Rinn");
-    const io = socketIO(server);
+    const io = socketIO(server, { transports: ["websocket"] });
     console.log(server);
     io.adapter(createAdapter());
     setupWorker(io);
