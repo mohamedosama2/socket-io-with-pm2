@@ -3,7 +3,6 @@ const socketIO = require("socket.io");
 const { createAdapter } = require("@socket.io/cluster-adapter");
 const { setupWorker } = require("@socket.io/sticky");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 module.exports = {
   up: function (server) {
