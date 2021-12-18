@@ -9,8 +9,8 @@ module.exports = {
     // console.log("Rinn");
     const io = socketIO(server);
     // console.log(server);
-    io.adapter(createAdapter());
-    setupWorker(io);
+    // io.adapter(createAdapter());
+    // setupWorker(io);
 
     const namespace = io.of("/chat");
 
