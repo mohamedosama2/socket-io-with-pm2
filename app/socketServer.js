@@ -3,11 +3,14 @@ const socketIO = require("socket.io");
 const { createAdapter } = require("@socket.io/cluster-adapter");
 const { setupWorker } = require("@socket.io/sticky");
 const jwt = require("jsonwebtoken");
+const { createServer } = require("http");
+const { Server } = require("socket.io");
 
 module.exports = {
   up: function (server) {
     console.log("Running Socket 0");
-    const io = socketIO(server, { transports: ["websocket"] });
+    const httpServer = createServer();
+    const io = new Server(httpServer);
     console.log("Running Socket 1");
 
     io.adapter(createAdapter());
