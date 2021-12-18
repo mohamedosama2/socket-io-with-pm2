@@ -4,18 +4,18 @@ module.exports = {
       script: "worker.js",
       instances: "2",
       exec_mode: "cluster",
-      env: {
+      env_production: {
         PORT: 8080,
-        NODE_ENV: "development",
+        NODE_ENV: "deployment",
       },
     },
     {
       script: "app",
       instances: "2",
       exec_mode: "cluster",
-      env: {
+      env_production: {
         PORT: 9002,
-        NODE_ENV: "development",
+        NODE_ENV: "deployment",
       },
     },
   ],
