@@ -10,9 +10,9 @@ module.exports = {
     const io = socketIO(server);
     console.log("Running Socket 1");
 
-    io.adapter(createAdapter());
+    // io.adapter(createAdapter());
     console.log("Running Socket 2");
-    setupWorker(io);
+    // setupWorker(io);
 
     console.log("Running Socket 3");
 
