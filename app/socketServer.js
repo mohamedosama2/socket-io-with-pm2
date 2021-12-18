@@ -6,15 +6,10 @@ const jwt = require("jsonwebtoken");
 
 module.exports = {
   up: function (server) {
-    console.log("Running Socket 0");
     const io = socketIO(server);
-    console.log("Running Socket 1");
 
     io.adapter(createAdapter());
-    console.log("Running Socket 2");
     setupWorker(io);
-
-    console.log("Running Socket 3");
 
     const namespace = io.of("/chat");
 
